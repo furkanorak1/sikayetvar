@@ -1,0 +1,15 @@
+#background {
+    position: absolute;
+    height: 36.29375em;
+    background: -o-linear-gradient(109.97deg, #8ddad5 8.42%, #00cdac 91.45%);
+    background: linear-gradient(340.03deg, #8ddad5 8.42%, #00cdac 91.45%);
+    width: 100%;
+
+    #shape {
+        position: absolute;
+        border-bottom: 80px solid white;
+        border-left: 99vw solid transparent;
+        bottom: 0;
+        right: 0;
+    }
+}

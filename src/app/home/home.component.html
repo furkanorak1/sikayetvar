@@ -1,0 +1,64 @@
+<section id="home">
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <div id="row{{i}}" class="row" *ngFor="let item of posts; let i = index">
+                    <div class="col-lg-8 col-sm-12 pl-0 d-flex align-items-center">
+                        <span id="post-index">{{i + 1}}</span>
+                        <span id="post">{{item.title}}</span>
+                    </div>
+                    <div id="home-buttons" class="col-lg-4 col-sm-12 pr-0 d-flex justify-content-end">
+                        <button id="btnDetail" class="btn" [routerLink]="['post/', item.id]">Detay</button>
+                        <button id="btnEdit" class="btn" (click)="editModalFunc(item.id, i)">Düzenle</button>
+                        <button id="btnDelete" class="btn" (click)="deleteModalFunc(item.id, i)">Sil</button>
+                    </div>
+                </div>
+                <div *ngIf="posts.length == 0" class="row">
+                    <div class="col text-center">
+                        <fa-icon id="warning-icon" class="mr-1" [icon]="icons.warning"></fa-icon> Veri yok.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Edit Modal -->
+<ng-template #editModal let-modal>
+    <div class="modal-header">
+        <h6 class="modal-title">Düzenle</h6>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" [(ngModel)]="postTitle">
+        </div>
+        <div class="mb-3">
+            <label for="body" class="form-label">Body</label>
+            <textarea class="form-control" id="body" rows="3" [(ngModel)]="postBody"></textarea>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" id="edit" class="btn" (click)="editPost()">Güncelle</button>
+    </div>
+</ng-template>
+
+<!-- Delete Modal -->
+<ng-template id="delete-modal" #deleteModal let-modal>
+    <div class="modal-header">
+        <h6 class="modal-title">Sil</h6>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p>Post'u silmek istediğinize emin misiniz?</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" id="delete" class="btn" (click)="deletePost()">Evet</button>
+        <button type="button" id="cancel" class="btn btn-light" (click)="modal.close('Close click')">İptal</button>
+    </div>
+</ng-template>

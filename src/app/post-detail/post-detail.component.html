@@ -1,0 +1,23 @@
+<section id="post-detail">
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <h3 id="post-title" class="mb-5">
+                            {{postDetail?.title}}
+                        </h3>
+                        <p id="post-body">
+                            {{postDetail?.body}}
+                        </p>
+                        <div id="post-username" class="text-center mt-5">
+                            <span><small>Author:</small><a class="ml-1"
+                                    [routerLink]="['/profile/', postDetail?.userId]">{{postDetail?.username}} <fa-icon
+                                        [icon]="icons.link"></fa-icon></a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

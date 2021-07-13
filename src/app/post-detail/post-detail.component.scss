@@ -1,0 +1,23 @@
+#post-detail {
+    letter-spacing: 0.3px;
+
+    .card-body {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+        #post-title {
+            color: #525f7f;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        #post-body {
+            color: #32325d;
+            font-weight: 300;
+        }
+    }
+}

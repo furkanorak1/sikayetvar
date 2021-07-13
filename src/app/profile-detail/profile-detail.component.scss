@@ -1,0 +1,61 @@
+#profile-detail {
+    #profile-top {
+        h3 {
+            font-size: 1.75em;
+            font-weight: 400;
+            line-height: 38px;
+        }
+
+        h6 {
+            font-weight: 300;
+            line-height: 22px;
+        }
+
+        #user-key div {
+            color: #adb5bd;
+            font-weight: 400;
+            font-size: 0.875em;
+            line-height: 26px;
+            letter-spacing: 0.1px;
+        }
+
+        #user-value div {
+            color: #525f7f;
+            margin-bottom: 0;
+            font-weight: 600;
+            line-height: 26px;
+            letter-spacing: 0.114286px;
+        }
+
+        @media (max-width: 992px) {
+            #user-value div {
+                font-size: 0.875em;
+            }
+
+            #embedded-map {
+                margin-top: 1em;
+                padding: 0;
+            }
+        }
+    }
+
+    hr {
+        margin: 1.8125em 0;
+    }
+
+    #profile-bottom {
+        p {
+            line-height: 27px;
+            letter-spacing: -0.3px;
+        }
+
+        #show-more {
+            margin-top: 4px;
+            margin-bottom: 0;
+            font-size: 1em;
+            font-weight: 400;
+            color: #4a90e2;
+            line-height: 22px;
+        }
+    }
+}

@@ -1,0 +1,111 @@
+@import "../../styles.scss";
+
+#home {
+    #post-index {
+        color: #525f7f;
+        font-weight: 700;
+        margin-right: 0.625rem;
+    }
+
+    #post {
+        color: #32325d;
+        font-weight: 300;
+    }
+
+    #home-buttons {
+        button {
+            @include button();
+        }
+
+        #btnDetail {
+            background-color: #5e72e4;
+        }
+
+        #btnEdit {
+            background-color: #2dce89;
+        }
+
+        #btnDelete {
+            background-color: #fb6340;
+            margin-right: 0;
+        }
+    }
+
+    #warning-icon {
+        color: #fb6340;
+    }
+
+    /* Media Queries */
+    @media (max-width: 992px) {
+        #home-buttons {
+            -webkit-box-pack: center !important;
+            -ms-flex-pack: center !important;
+            justify-content: center !important;
+            margin-top: 1em;
+            padding: 0;
+        }
+    }
+}
+
+/* Modals */
+::ng-deep .modal {
+    .modal-header {
+        padding: 1.0625em 1.25em !important;
+        border-bottom: 1px solid #e9ecef;
+
+        .modal-title {
+            font-weight: normal;
+            line-height: 1.375em;
+        }
+    }
+
+    .modal-body {
+        padding: 1.625em 1.5em;
+
+        label {
+            font-weight: 600;
+            font-size: 0.875em;
+            line-height: 1.1875em;
+            letter-spacing: 0.431667px;
+            color: #525f7f;
+        }
+
+        input#title,
+        textarea#body {
+            border: 1px solid #cad1d7;
+            font-weight: normal;
+            font-size: 0.875em;
+            line-height: 1.1875em;
+            color: #8898aa;
+        }
+    }
+
+    .modal-footer {
+        border-top: 1px solid #e9ecef;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        padding: 1.5em;
+
+        button#edit {
+            @include button();
+            background: #11cdef;
+            letter-spacing: 0.31px;
+            margin: 0;
+        }
+
+        button#delete {
+            @include button();
+            background: #fb6340;
+            letter-spacing: 0.31px;
+            margin: 0 0.625em 0 0;
+        }
+
+        button#cancel {
+            @include button();
+            color: #32325d;
+            letter-spacing: 0.31px;
+            margin: 0;
+        }
+    }
+}

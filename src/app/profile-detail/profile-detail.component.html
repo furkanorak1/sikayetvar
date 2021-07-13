@@ -1,0 +1,50 @@
+<section id="profile-detail">
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <div id="profile-top" class="row">
+                    <div class="col-lg-6 col-12 pl-0">
+                        <h3>{{userDetail?.name}}</h3>
+                        <h6>{{userDetail?.address?.city}}</h6>
+
+                        <div class="row">
+                            <div class="col-lg-3 col-4 pl-0" id="user-key">
+                                <div>Username</div>
+                                <div>Email</div>
+                                <div>Phone</div>
+                                <div>Website</div>
+                                <div>Company</div>
+                            </div>
+                            <div class="col-lg-9 col-8 pl-0" id="user-value">
+                                <div>{{userDetail?.username}}</div>
+                                <div>{{userDetail?.email}}</div>
+                                <div>{{userDetail?.phone}}</div>
+                                <div><a href="http://{{userDetail?.website}}">{{userDetail?.website}}</a></div>
+                                <div>{{userDetail?.company?.name}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="embedded-map" class="col-lg-6 col-12 pr-0">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.9855509259!2d-122.50764023643434!3d37.75781499665278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20Kaliforniya%2C%20Amerika%20Birle%C5%9Fik%20Devletleri!5e0!3m2!1str!2str!4v1626013497305!5m2!1str!2str"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <hr>
+                <div id="profile-bottom" class="row">
+                    <div class="col">
+                        <p class="text-center">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
+                            Ut ea nostrum numquam officiis quas commodi dolores nobis eaque veniam quos impedit sit,<br>
+                            eligendi architecto cum vitae minima suscipit cupiditate iure ratione asperiores rerum atque
+                            aperiam deserunt est.
+                        </p>
+                        <p id="show-more" class="text-center">
+                            Show more
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

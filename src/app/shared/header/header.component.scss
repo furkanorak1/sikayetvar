@@ -1,0 +1,30 @@
+@import "../../../styles.scss";
+
+#header {
+    position: relative;
+    min-height: 11.6875em;
+    z-index: 1;
+
+    .row {
+        padding-top: 32px;
+        padding-bottom: 187px;
+
+        #menu {
+            color: #ffffff;
+            font-size: 0.875em;
+            line-height: 1.1875em;
+            mix-blend-mode: normal;
+            opacity: 0.95;
+        }
+
+        #login {
+            button {
+                @include button();
+                background: #ffffff;
+                color: #5e72e4;
+                margin: 0;
+                text-transform: none;
+            }
+        }
+    }
+}
